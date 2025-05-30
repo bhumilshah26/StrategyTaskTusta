@@ -15,7 +15,7 @@ function rsiEmaStrategy(data, {rsi, ema21}) {
 
     const prevRsi = rsi[i - 1];
 
-    if (!inTrade && curr_rsi >= 30 && candle.close > curr_ema21) {
+    if (!inTrade && prevRsi < 30 && curr_rsi > 30 && candle.close > curr_ema21) {
       inTrade = true;
       entry = { Entry_Time: candle.time, Entry_Price: candle.close }}
 

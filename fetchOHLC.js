@@ -1,4 +1,3 @@
-// fetchData.js
 const axios = require('axios');
 
 async function fetchOHLC(symbol = 'BTCUSDT') {
